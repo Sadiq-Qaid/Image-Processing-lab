@@ -1,6 +1,6 @@
 # 1) Develop a program to display grayscale image using read and write operations
 
- # Describtion
+ # Describtion:
   Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
 
 Importance of grayscaling –
@@ -24,6 +24,11 @@ cv2.destroyAllWindows()
 # 2) Develop a program to perform a linear transformation for an image
 # (scaling &amp; rotation)
 # a. Scaling:
+ # Describtion:
+   When we are programming with OpenCV in Python, we often need images with specific dimensions. For example, let’s suppose that we want to resize a large image to fit on our computer screen and we need to shrink it. So, how we can do that?
+
+We already learned that a digital image is presented in our computer by a matrix of pixels and each pixel has a specific value. So, if we want to resize our image, we just need to multiply values of our pixels with some scalar. In order to do that we just need to define coordinates of our resized image and apply function cv2.resize(). So, let’s see how it works:
+ # Code
 import cv2 as c
 import numpy as np
 img= cv2.imread(&quot;app.jpg&quot;)
