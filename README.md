@@ -99,7 +99,7 @@ ret, bw_img = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
 cv2.imshow(&quot;Orignal_Image&quot;,img)
 cv2.imshow(&quot;Binary Image&quot;,bw_img)
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows() 
 
 # Output:
 ![image](https://user-images.githubusercontent.com/72402606/104432935-85f51000-55af-11eb-9dc9-979353ab15a7.png)
