@@ -119,5 +119,5 @@ im = Image.fromarray(imarray,&#39;RGB&#39;)
 im.save(&#39;result_image.png&#39;)
 im.show()
 
-# Output:
+# Output: 
 ![image](https://user-images.githubusercontent.com/72402606/104433780-7d510980-55b0-11eb-8ee4-cbf70bd161d9.png)
