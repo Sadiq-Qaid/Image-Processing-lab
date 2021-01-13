@@ -8,8 +8,7 @@ cv2.imshow(&quot;Gray_Scale&quot;,gray_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# output:
-![image](https://user-images.githubusercontent.com/72402606/104429706-f00bb600-55ab-11eb-9f9c-47be74cb7566.png)
+
 
 
 # 2) Develop a program to perform a linear transformation for an image
@@ -27,8 +26,7 @@ c.imshow(&quot;Scaling&quot;,res)
 c.waitKey(0)
 c.destroyAllWindows()
 
-# Output:
-![image](https://user-images.githubusercontent.com/72402606/104431462-eb480180-55ad-11eb-9a2a-19989d09936a.png)
+
 
 # b. Rotation:
 import cv2 as c
@@ -42,8 +40,7 @@ c.imshow(&quot;rotation&quot;,rotated_img)
 c.waitKey(0)
 c.destroyAllWindows()
 
-# Output:
-![image](https://user-images.githubusercontent.com/72402606/104431835-5d204b00-55ae-11eb-8b4f-5539aa5ee0c0.png)
+
 
 # 3)Develop a program to find sum and mean of a set of images
 
@@ -66,9 +63,7 @@ meanImg = im/len(files)
 cv2.imshow(&quot;MEAN_OF_FOUR_IMAGES&quot;,meanImg)
 cv2.waitKey(0)
 
-# Output:
 
-![image](https://user-images.githubusercontent.com/72402606/104432338-f0598080-55ae-11eb-96cb-4a2d47f4a533.png)
 
 # 4)Develop a program to convert image into a binary (Black and
 white) colour.
@@ -80,8 +75,7 @@ cv2.imshow(&quot;Binary Image&quot;,bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# Output:
-![image](https://user-images.githubusercontent.com/72402606/104432935-85f51000-55af-11eb-9dc9-979353ab15a7.png)
+
 
 # 5)Develop a program to convert the given colour image to different
 colour spaces.
@@ -97,8 +91,7 @@ cv2.imshow(&quot;RGB&quot;, img_RGB)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# Output:
-![image](https://user-images.githubusercontent.com/72402606/104433325-fdc33a80-55af-11eb-80f8-c9b976511ff2.png)
+
 
 # 6)Develop a program to create an image from 2D array (create an
 # array of random size and density values).
@@ -110,5 +103,3 @@ im = Image.fromarray(imarray,&#39;RGB&#39;)
 im.save(&#39;result_image.png&#39;)
 im.show()
 
-# Output:
-![image](https://user-images.githubusercontent.com/72402606/104433780-7d510980-55b0-11eb-8ee4-cbf70bd161d9.png)
