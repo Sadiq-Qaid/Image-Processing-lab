@@ -95,6 +95,10 @@ c.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72402606/104431835-5d204b00-55ae-11eb-8b4f-5539aa5ee0c0.png)
 
 # 3)Develop a program to find sum and mean of a set of images
+# Description:
+In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison
+
+Mean is most basic of all statistical measure. Means are often used in geometry and analysis; a wide range of means have been developed for these purposes. In contest of image processing filtering using mean is classified as spatial filtering and used for noise reduction.
 # Code
 import cv2
 
@@ -138,7 +142,11 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/72402606/104432338-f0598080-55ae-11eb-96cb-4a2d47f4a533.png)
 
 # 4)Develop a program to convert image into a binary (Black and
-white) colour.
+# white) colour.
+# Description:
+Binary images are images whose pixels have only two possible intensity values. Numerically, the two values are often 0 for black, and either 1 or 255 for white. The main reason binary images are particularly useful in the field of Image Processing is because they allow easy separation of an object from the background.
+
+In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
 # Code
 
 import cv2
@@ -161,6 +169,8 @@ cv2.destroyAllWindows()
 
 # 5)Develop a program to convert the given colour image to different
 # colour spaces.
+# Description:
+Color spaces are different types of color modes, used in image processing and signals and system for various purposes. The color spaces in image processing aim to facilitate the specifications of colors in some standard way. Different types of color spaces are used in multiple fields like in hardware, in multiple applications of creating animation, etc.
 # Code 
 import cv2
 
