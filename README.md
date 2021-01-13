@@ -1,6 +1,6 @@
 # 1) Develop a program to display grayscale image using read and write operations
 
- # Describtion:
+ # Description:
   Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
 
 Importance of grayscaling –
@@ -24,7 +24,7 @@ cv2.destroyAllWindows()
 # 2) Develop a program to perform a linear transformation for an image
 # (scaling &amp; rotation)
 # a. Scaling:
- # Describtion:
+ # Description:
    When we are programming with OpenCV in Python, we often need images with specific dimensions. For example, let’s suppose that we want to resize a large image to fit on our computer screen and we need to shrink it. So, how we can do that?
 
 We already learned that a digital image is presented in our computer by a matrix of pixels and each pixel has a specific value. So, if we want to resize our image, we just need to multiply values of our pixels with some scalar. In order to do that we just need to define coordinates of our resized image and apply function cv2.resize(). So, let’s see how it works:
@@ -46,7 +46,7 @@ c.destroyAllWindows()
 
 # b. Rotation:
 
-# Describtion:
+# Description:
  When we perform rotation in linear algebra we always rotate along the center of the coordinate system, However, in OpenCV while processing images we can also rotate our image along arbitrary point which can be defined as an additional parameter of our function. For instance, very often this parameter can be a center of the image and it will be defined in the following way.
  After defining a rotation matrix M we need to call cv2.getRotationMatrix2D() function which has few arguments. The first argument is the point around which we want to rotate the image, in our case it will be the center.
  Finally, we can apply the rotation to our image using cv2.warpAffine()method. We need to specify our rotation matrix M and the height and the width of our output image.
