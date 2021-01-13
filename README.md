@@ -45,6 +45,13 @@ c.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72402606/104431462-eb480180-55ad-11eb-9a2a-19989d09936a.png)
 
 # b. Rotation:
+
+# Describtion:
+ When we perform rotation in linear algebra we always rotate along the center of the coordinate system, However, in OpenCV while processing images we can also rotate our image along arbitrary point which can be defined as an additional parameter of our function. For instance, very often this parameter can be a center of the image and it will be defined in the following way.
+ After defining a rotation matrix M we need to call cv2.getRotationMatrix2D() function which has few arguments. The first argument is the point around which we want to rotate the image, in our case it will be the center.
+ Finally, we can apply the rotation to our image using cv2.warpAffine()method. We need to specify our rotation matrix M and the height and the width of our output image.
+ 
+# Code
 import cv2 as c
 import numpy as np
 img= cv2.imread(&quot;app.jpg&quot;)
