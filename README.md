@@ -221,3 +221,91 @@ im.show()
 
 # Output: 
 ![image](https://user-images.githubusercontent.com/72402606/104433780-7d510980-55b0-11eb-8ee4-cbf70bd161d9.png)
+
+# 1)Develop a program to find the neighbours of each element in the matrix.
+
+# Description:
+In topology and related areas of mathematics, a neighbourhood (or neighborhood) is one of the basic concepts in a topological space.It is closely related to the concepts of open set and interior.Intuitively speaking, a neighbourhood of a point is a set of points containing that point where one can move some amount in any direction away from that point without leaving the set.
+# Code
+
+import numpy as np
+
+
+axis = int(input("Enter the radius of the matrix:"))
+
+neighbor = int(input("Enter the 4 or 8 to calculate the neighbors"))
+
+
+if neighbor == 4 or neighbor == 8:
+
+    x =np.empty((axis,axis))
+    
+    
+    y = np.empty((axis+2,axis+2))
+    
+    
+    s =np.empty((axis,axis))
+    
+    for i in range(0,axis):
+    
+        for j in range(0,axis):
+        
+            x[i][j]=int(i+j+1)
+            
+    for i in range(0,axis):
+    
+        for j in range(0,axis):
+        
+            print(int(x[i][j]),end = '\t')
+            
+        print('\n')
+        
+
+
+    for i in range(0,axis+2):
+    
+        for j in range(0,axis+2):
+        
+            if i == 0 or i == axis+1 or j == 0 or j==axis+1:
+            
+                y[i][j]=0
+                
+            else:
+            
+                y[i][j]=x[i-1][j-1]
+                
+    for i in range(0,axis+2):
+    
+        for j in range(0,axis+2):
+        
+            print(int(y[i][j]),end = '\t')
+            
+        print('\n')
+        
+
+    for i in range(0,axis):
+    
+        for j in range(0,axis):
+        
+            if neighbor == 4:
+            
+                    s[i][j]=((y[i][j+1]+y[i+1][j]+y[i+1][j+2]+y[i+2][j+1])/neighbor)
+                    
+                    print(s[i][j],end = '\t')
+                    
+            elif neighbor ==8:
+            
+                    s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/neighbor)
+                    
+                    print(s[i][j],end = '\t')
+                    
+        print('\n')
+        
+else:
+
+     print("Wrong neighbors, you have to select ether 4 or 8")
+     
+     
+# output  
+![image](https://user-images.githubusercontent.com/72402606/104449753-1ab63880-55c5-11eb-8ba9-02e8eb9a628b.png)
+
