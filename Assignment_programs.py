@@ -103,3 +103,73 @@ im = Image.fromarray(imarray,&#39;RGB&#39;)
 im.save(&#39;result_image.png&#39;)
 im.show()
 
+# 7) a)Develop a program to find the neighbours of each element in the matrix.
+  #  b)Write a program to find the sum of neighbour values in a matrix.
+
+ 
+
+    import numpy as np
+    axis = int(input("Enter the radius of the matrix: "))
+    neighbor = int(input("Enter the 4 or 8 to calculate the neighbors: "))
+    if neighbor == 4 or neighbor == 8:
+    x =np.empty((axis,axis))
+    y = np.empty((axis+2,axis+2))
+    s =np.empty((axis,axis))
+    
+    # Generating the Values of the Matrix
+    for i in range(0,axis):
+        for j in range(0,axis):
+            x[i][j]=int(i+j+1)
+    # Printing the Values of the Generated Matrix
+    print("Printing the Values of the Generated Matrix", end="\n")
+    for i in range(0,axis):
+        for j in range(0,axis):
+            pass
+            print(int(x[i][j]),end = '\t')
+        print('\n')
+
+
+    for i in range(0,axis+2):
+        for j in range(0,axis+2):
+            if i == 0 or i == axis+1 or j == 0 or j==axis+1:
+                y[i][j]=0
+            else:
+                y[i][j]=x[i-1][j-1]
+                
+    # Printing the Values of the Matrix after padding with zeros
+    print("The Values of the Matrix after padding with zeros:", end="\n")
+    for i in range(0,axis+2):
+        for j in range(0,axis+2):
+            print(int(y[i][j]),end = '\t')
+        print('\n')
+    
+    print("The neighbours of each element in the matrix:", end="\n")
+    for i in range(0,axis):
+        for j in range(0,axis):
+            
+            if neighbor == 4:                
+                s[i][j]=((y[i][j+1]+y[i+1][j]+y[i+1][j+2]+y[i+2][j+1]))
+                print(x[i][j],":",end = '\t')
+                print(y[i][j+1],',',y[i+1][j],',',y[i+1][j+2],',',y[i+2][j+1])
+                #print(s[i][j],end = '\t')
+            elif neighbor ==8:
+                    s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2]))
+                    print(x[i][j],":",end = '\t')
+                    print(y[i][j],',',y[i][j+1],',',y[i][j+2],',',y[i+1][j],',',y[i+1][j+2],',',y[i+2][j],',',y[i+2][j+1],',',y[i+2][j+2])
+                    #print(s[i][j],end = '\t')
+        print('\n')
+        
+    print("The following matrix contains the sum of neighbour values in a matrix")
+    for i in range(0,axis):
+        for j in range(0,axis):
+            
+            if neighbor == 4:                
+                s[i][j]=((y[i][j+1]+y[i+1][j]+y[i+1][j+2]+y[i+2][j+1]))
+                print(s[i][j],end = '\t')
+            elif neighbor ==8:
+                s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2]))
+                print(s[i][j],end = '\t')
+        print('\n')
+else:
+     print("Wrong neighbors, you have to select ether 4 or 8")
+     
