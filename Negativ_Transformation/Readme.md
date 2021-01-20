@@ -1,4 +1,4 @@
-# 7) develop a program to impelemnt Negative transformation of the image.
+# develop a program to impelemnt Negative transformation of the image.
 # description:
 Image is also known as a set of pixels. When we store an image in computers or digitally, it’s corresponding pixel values are stored. So, when we read an image to a variable using OpenCV in Python, the variable stores the pixel values of the image. When we try to negatively transform an image, the brightest areas are transformed into the darkest and the darkest areas are transformed into the brightest.
 
